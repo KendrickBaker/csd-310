@@ -37,3 +37,7 @@ print("-- Insert Statements --")
 print(f"\nInserted student record", Kendrick, Kendrick_student_id)
 print(f"\nInserted student record", Camden, Camden_student_id)
 print(f"\nInserted student record", Lisa, Lisa_student_id)
+
+query = { "student id": {"$regex": "^1"} }
+
+students.delete_many(query)
